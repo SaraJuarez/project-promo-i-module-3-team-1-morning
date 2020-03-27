@@ -1,0 +1,63 @@
+.design {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.25rem;
+  margin-top: 1.375rem;
+  &__content {
+    font-size: 14px;
+    font-family: $font-secondary;
+    color: #54585a;
+    text-transform: uppercase;
+  }
+  &__radio {
+    display: flex;
+    margin-bottom: 1.25rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__paleta {
+    display: flex;
+    margin-left: 0.625rem;
+    &__1 {
+      @include sizeSquare;
+      background-color: $color-dark-green;
+    }
+    &__2 {
+      @include sizeSquare;
+      background-color: $color-blue;
+    }
+    &__3 {
+      @include sizeSquare;
+      background-color: $color-light-green;
+    }
+    &__4 {
+      @include sizeSquare;
+      background-color: #420101;
+    }
+
+    &__5 {
+      @include sizeSquare;
+      background-color: #bd1010;
+    }
+    &__6 {
+      @include sizeSquare;
+      background-color: $color-orange;
+    }
+
+    &__7 {
+      @include sizeSquare;
+      background-color: #3e5b65;
+    }
+    &__8 {
+      @include sizeSquare;
+      background-color: #eab052;
+    }
+
+    &__9 {
+      @include sizeSquare;
+      background-color: #a0c0cf;
+    }
+  }
+}
