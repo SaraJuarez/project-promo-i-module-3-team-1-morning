@@ -2,10 +2,12 @@ import React from 'react';
 import Collapsable from './Collapsable';
 
 function Box2(props) {
-  return(
-  <Collapsable />
-  <Collapsable />
-  <Collapsable />
+  return (
+    <div>
+      <Collapsable />
+      <Collapsable />
+      <Collapsable />
+    </div>
   );
 }
 

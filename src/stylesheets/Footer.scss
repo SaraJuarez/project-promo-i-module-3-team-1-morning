@@ -1,0 +1,17 @@
+@import 'Settings';
+.footer {
+  text-align: center;
+  margin: 1.12rem 3.81rem 1.5rem 3.81rem;
+  height: 5.75rem;
+  &__text {
+    font-family: $font-secondary;
+    font-size: 0.87rem;
+    line-height: 1.25rem;
+    color: #6b6b6b;
+    opacity: 50%;
+    padding-bottom: 0.75rem;
+  }
+  &__logo {
+    width: 6.43rem;
+  }
+}

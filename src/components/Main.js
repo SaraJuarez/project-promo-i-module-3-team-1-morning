@@ -3,9 +3,11 @@ import Box1 from './Box1';
 import Box2 from './Box2';
 
 function Main(props) {
-  return(
-  <Box1 />
-  <Box2 />
+  return (
+    <div className='Main'>
+      <Box1 />
+      <Box2 />
+    </div>
   );
 }
 
