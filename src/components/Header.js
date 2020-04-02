@@ -4,8 +4,8 @@ import imageHeader from '../images/tarjetas-molonas.png';
 
 function Header(props) {
   return (
-    <header class='header'>
-      <img class='header__img' src={imageHeader} alt='header-image' title='header-image' />
+    <header className='header'>
+      <img className='header__img' src={imageHeader} alt='header' title='header-image' />
     </header>
   );
 }
