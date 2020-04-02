@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Collapsable(props) {
+function Fill(props) {
   return (
     <div>
       <p>Culo</p>
@@ -8,4 +8,4 @@ function Collapsable(props) {
   );
 }
 
-export default Collapsable;
+export default Fill;
