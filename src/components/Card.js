@@ -7,7 +7,7 @@ function Card(props) {
     <section className='card js-card'>
       <header className='card__title js-card-title'>
         <div className='card__title__box js-card-title-box'>
-          <h2 className='card__title__first js-card-title-first'>Nombre apellido</h2>
+          <h2 className='card__title__first js-card-title-first'>{props.formObject.name || 'Nombre y Apellidos'}</h2>
           <h3 className='card__title__second js-card-title-second'>Front-end developer</h3>
         </div>
       </header>

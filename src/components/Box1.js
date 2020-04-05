@@ -6,7 +6,7 @@ function Box1(props) {
   return (
     <section className='principal container-box__one'>
       <Reset />
-      <Card />
+      <Card formObject={props.formObject} />
     </section>
   );
 }
