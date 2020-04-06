@@ -10,11 +10,14 @@ import iconShare from '../images/share-alt-solid.svg';
 import '../stylesheets/Box2.scss';
 
 function Box2(props) {
+  function handlePalettePreview(value) {
+    console.log('Yo soy Box', value);
+  }
   return (
     <ul class='container-box__two'>
       <li class='collapse'>
         <Collapsable title='Diseña' icon={iconDesign} />
-        <Design />
+        <Design handlePalettePreview={handlePalettePreview} />
       </li>
       <li class='collapse'>
         <Collapsable title='Rellena' icon={iconFill} />
