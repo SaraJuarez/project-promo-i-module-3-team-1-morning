@@ -2,6 +2,7 @@ import React from 'react';
 import Box1 from './Box1';
 import Box2 from './Box2';
 import '../stylesheets/Main.scss';
+import { useState } from 'react';
 
 let formObject = {
   name: 'pipi',
@@ -13,10 +14,16 @@ let formObject = {
 };
 
 function Main(props) {
+  const [data, setData] = useState([])
+  const handleInputPreview = (value) => {
+    console.log(value)
+    setData(value)
+    console.log(data)
+  }
   return (
     <div className="container-box">
-      <Box1 formObject={formObject} />
-      <Box2 />
+      <Box1 formObject={formObject} infoFromInput={data} />
+      <Box2 handlefunction={handleInputPreview} />
     </div>
   );
 }

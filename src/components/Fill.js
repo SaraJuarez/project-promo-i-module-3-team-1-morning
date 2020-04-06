@@ -1,30 +1,29 @@
 import React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 import '../stylesheets/Fill.scss';
 
-function Fill() {
-  const [name, setName] = useState('Default');
-  const [job, setJob] = useState('Default');
+function Fill(props) {
 
-  const getName = (ev) => {
-    let writeName = ev.target.value;
-    setName(writeName);
+  const getValue = (ev) => {
+    let writeValue = ev.target.value;
+    let writedType = ev.target.name;
+    props.handleInputsforFill({
+      value: writeValue,
+      type: writedType
+    })
   };
-  const getJob = (ev) => {
-    let writeJob = ev.target.value;
-    setJob(writeJob);
-  };
+
 
   return (
     <form className="complete__form" action="#" method="post" id="myForm">
       <label className="complete__form__label required" for="name">
         Nombre completo
       </label>
-      <input onChange={getName} className="js-form-input-name complete__form__input" type="text" name="name" placeholder="Ej: Doña Rogelia" />
+      <input onChange={getValue} className="js-form-input-name complete__form__input" type="text" name="name" placeholder="Ej: Doña Rogelia" />
       <label className="complete__form__label" for="puesto">
         Puesto
       </label>
-      <input onChange={getJob} className="js-form-input-job complete__form__input" type="text" name="job" placeholder="Ej: La muñeca que todos quieren" />
+      <input onChange={getValue} className="js-form-input-job complete__form__input" type="text" name="job" placeholder="Ej: La muñeca que todos quieren" />
       <label className="complete__form__label" for="image">
         Imagen de perfil
       </label>
