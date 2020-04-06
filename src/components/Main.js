@@ -3,8 +3,8 @@ import Box1 from './Box1';
 import Box2 from './Box2';
 
 let formObject = {
-  name: 'Pippi Långstrump',
-  job: 'Front End Developeradd©',
+  name: 'Doña Rogelia',
+  job: 'Front End Developer',
   email: 'pipi@gmail.com',
   tel: '644555334',
   linkedin: 'https://www.linkedin.com/in/beatrizfleon/',

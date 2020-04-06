@@ -1,6 +1,7 @@
 import React from 'react';
 import '../stylesheets/Card.scss';
-import pipi from '../images/pipi.jpeg';
+// import pipi from '../images/pipi.jpeg';
+import rogelia from '../images/image-rogelia.jpg';
 
 function Card(props) {
   return (
@@ -11,7 +12,7 @@ function Card(props) {
           <h3 className='card__title__second js-card-title-second'>{props.formObject.job || 'Front-end developer'}</h3>
         </div>
       </header>
-      <img className='js-card-img card__img' src={pipi} alt='card' title='card-image' />
+      <img className='js-card-img card__img' src={rogelia} alt='card' title='card-image' />
       <nav className='card__menu js-card-menu'>
         <ul className='card__menu__links js-card-menu-links'>
           <li className='card__menu__links__icon js-card-menu-links-icon'>
