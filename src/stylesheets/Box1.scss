@@ -1,0 +1,44 @@
+@import 'Settings';
+.principal {
+  background: linear-gradient(#bfcdd0, #dde9ed);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2.37rem;
+  padding-bottom: 2.5rem;
+
+  &__container__button {
+    width: 15rem;
+    padding-bottom: 1.25rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    line-height: 1.25rem;
+    font-size: 0.75rem;
+    color: $color-metal;
+    width: 4.68rem;
+    height: 1.87rem;
+    border-radius: 0.93rem;
+    border: solid 1px $color-white;
+    background-color: #bfcdd0;
+  }
+
+  &__icon {
+    font-size: 0.75rem;
+  }
+}
+@media all and (min-width: 768px) {
+  .container-box__one {
+    width: 43%;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.43rem 1.25rem 1.31rem 0;
+  }
+}

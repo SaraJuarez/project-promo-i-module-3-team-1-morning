@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from './Card';
 import Reset from './Reset';
+import '../stylesheets/Box1.scss';
 
 function Box1(props) {
   return (
-    <section className='principal container-box__one'>
+    <section className="principal container-box__one">
       <Reset />
       <Card formObject={props.formObject} />
     </section>

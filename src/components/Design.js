@@ -1,11 +1,7 @@
 import React from 'react';
 
 function Design(props) {
-  return (
-    <div>
-      <p>Culo</p>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Design;
