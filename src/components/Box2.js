@@ -11,18 +11,18 @@ import '../stylesheets/Box2.scss';
 
 function Box2(props) {
   return (
-    <ul class="container-box__two">
-      <li class="collapse">
-        <Collapsable title="Diseña" icon={iconDesign} />
+    <ul class='container-box__two'>
+      <li class='collapse'>
+        <Collapsable title='Diseña' icon={iconDesign} />
         <Design />
       </li>
-      <li class="collapse">
-        <Collapsable title="Rellena" icon={iconFill} />
+      <li class='collapse'>
+        <Collapsable title='Rellena' icon={iconFill} />
         <Fill />
       </li>
-      <li class="collapse">
-        <Collapsable title="Comparte" icon={iconShare} />
-        />
+      <li class='collapse'>
+        <Collapsable title='Comparte' icon={iconShare} />
+
         <Share />
       </li>
     </ul>
