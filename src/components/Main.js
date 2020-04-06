@@ -3,7 +3,7 @@ import Box1 from './Box1';
 import Box2 from './Box2';
 
 let formObject = {
-  name: 'Doña Rogelia',
+  name: 'pipi',
   job: 'Front End Developer',
   email: 'pipi@gmail.com',
   tel: '644555334',
