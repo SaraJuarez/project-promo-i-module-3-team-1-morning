@@ -22,7 +22,6 @@ function Box2(props) {
       </li>
       <li class='collapse'>
         <Collapsable title='Comparte' icon={iconShare} />
-
         <Share />
       </li>
     </ul>
