@@ -4,6 +4,7 @@ import { useState } from 'react';
 function Fill() {
     const [name, setName] = useState('Default')
     const [job, setJob] = useState('Default')
+
     const getName = (ev) => {
         let writeName = ev.target.value;
         setName(writeName)
@@ -12,7 +13,6 @@ function Fill() {
         let writeJob = ev.target.value;
         setJob(writeJob)
     }
-
 
     return (
 
