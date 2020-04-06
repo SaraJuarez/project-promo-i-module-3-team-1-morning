@@ -1,4 +1,5 @@
 import React from 'react';
+// import '../stylesheets/Share.scss';
 
 function Share(props) {
   return (
@@ -12,7 +13,11 @@ function Share(props) {
         <span className='share__card__text'>La tarjeta ha sido creada:</span>
         {/* <a href='/' className='share__card__link js-share-link'></a> */}
         {/* Reemplazar la URL a compartir por la http de google  */}
-        <a href='/' target='_blank' className='share__card__twitter js-share-button'>
+        <a
+          href='/'
+          target='_blank'
+          className='share__card__twitter js-share-button'
+        >
           <i className='fab fa-twitter'></i>Compartir en twitter
         </a>
       </div>
