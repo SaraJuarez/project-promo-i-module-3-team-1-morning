@@ -5,11 +5,14 @@ import '../stylesheets/Fill.scss';
 function Fill(props) {
 
   const getValue = (ev) => {
-    const { name, value } = ev.target
+    // const { name, value } = ev.target
+    const htmlInput = ev.target
+    console.log(ev.target)
 
-    props.handleInputsforFill({
-      [name]: value
-    }
+    props.handleInputsforFill(
+      // [name]: 
+      htmlInput
+
 
     )
   };

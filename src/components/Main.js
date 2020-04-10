@@ -21,8 +21,8 @@ function Main(props) {
   const handleInputPreview = value => {
     const newData = {
       ...data,
-      // [value.name]: value.value
-      value
+      [value.name]: value.value
+
     }
     setData(newData)
 
