@@ -10,16 +10,20 @@ let formObject = {
   email: 'pipi@gmail.com',
   tel: '644555334',
   linkedin: 'https://www.linkedin.com/in/beatrizfleon/',
-  github: 'https://github.com/Beatrizfleon',
+  github: 'https://github.com/Beatrizfleon'
 };
 
 function Main(props) {
-  const [data, setData] = useState([])
-  const handleInputPreview = (value) => {
-    console.log(value)
-    setData(value)
-    console.log(data)
-  }
+  const [data, setData] = useState({});
+  const handleInputPreview = value => {
+    console.log(value);
+    const newData = {
+      ...data,
+      [value.type]: value.value
+    };
+    setData(newData);
+  };
+  console.log(data);
   return (
     <div className="container-box">
       <Box1 formObject={formObject} infoFromInput={data} />
