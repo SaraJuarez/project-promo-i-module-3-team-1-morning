@@ -18,11 +18,11 @@ function Fill(props) {
         Nombre completo
       </label>
       <input onChange={getValue} className="js-form-input-name complete__form__input" type="text" name="name" placeholder="Ej: Doña Rogelia" />
-      <label className="complete__form__label" for="puesto">
+      <label className="complete__form__label" htmlFor="puesto">
         Puesto
       </label>
       <input onChange={getValue} className="js-form-input-job complete__form__input" type="text" name="job" placeholder="Ej: La muñeca que todos quieren" />
-      <label className="complete__form__label" for="image">
+      <label className="complete__form__label" htmlFor="image">
         Imagen de perfil
       </label>
       <div className="complete__form__image-fields">
@@ -38,7 +38,7 @@ function Fill(props) {
         Email
       </label>
       <input className="complete__form__input js-form-input-email" type="email" name="email" placeholder="Ej: la_rogelia@gmail.com" required />
-      <label className="complete__form__label required" for="telephone">
+      <label className="complete__form__label required" htmlFor="telephone">
         Teléfono
       </label>
       <input className="complete__form__input js-form-input-tel" type="tel" name="phone" placeholder="Ej: 926 61 30 84" required />
