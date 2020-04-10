@@ -19,6 +19,7 @@ let data = {
 function Main(props) {
   const [data, setData] = useState({});
   const handleInputPreview = value => {
+    console.log(value);
     const newData = {
       ...data,
       [value.name]: value.value
