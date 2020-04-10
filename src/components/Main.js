@@ -12,20 +12,41 @@ let formObject = {
   linkedin: 'https://www.linkedin.com/in/beatrizfleon/',
   github: 'https://github.com/Beatrizfleon',
 };
+let data = {
+
+}
 
 function Main(props) {
-  const [data, setData] = useState([])
-  const handleInputPreview = (value) => {
-    console.log(value)
-    setData(value)
-    console.log(data)
+  const [data, setData] = useState({});
+  const handleInputPreview = value => {
+    const newData = {
+      ...data,
+      // [value.name]: value.value
+      value
+    }
+    setData(newData)
+
   }
+
+
   return (
-    <div className="container-box">
+    <div className="container-box" >
       <Box1 formObject={formObject} infoFromInput={data} />
-      <Box2 handlefunction={handleInputPreview} />
+      < Box2 handlefunction={handleInputPreview} />
     </div>
   );
+
+
 }
+
+
+//   return(
+//       <div className = "container-box" >
+//       <Box1 formObject={formObject} infoFromInput={data} />
+//       <Box2 handlefunction={handleInputPreview} />
+//       </div>
+//     );
+//   }
+// }
 
 export default Main;
