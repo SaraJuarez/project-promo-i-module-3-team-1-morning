@@ -1,12 +1,15 @@
 import React from 'react';
 import '../stylesheets/Card.scss';
-// import pipi from '../images/pipi.jpeg';
+import '../stylesheets/Theme1.scss';
+import '../stylesheets/Theme2.scss';
+import '../stylesheets/Theme3.scss';
 import rogelia from '../images/image-rogelia.jpg';
 
 function Card(props) {
   console.log('soy propers', props.properties);
   return (
-    <section className='card js-card'>
+    // <section className={`card js-card ${props.properties.palette === 'green' ? 'card--theme1' : 'card--theme2'}`}>
+    <section className={`card js-card ${props.properties.palette === 'green' ? 'card--theme1' : props.properties.palette === 'red' ? 'card--theme2' : 'card--theme3'}`}>
       <header className='card__title js-card-title'>
         <div className='card__title__box js-card-title-box'>
           <h2 className='card__title__first js-card-title-first'>{props.properties.name || 'Nombre y Apellidos'}</h2>
