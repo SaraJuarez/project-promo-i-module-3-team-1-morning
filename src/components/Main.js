@@ -14,14 +14,14 @@ let formObject = {
 };
 
 function Main(props) {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   const handleInputPreview = (value) => {
-    console.log(value)
-    setData(value)
-    console.log(data)
-  }
+    console.log(value);
+    setData(value);
+    console.log(data);
+  };
   return (
-    <div className="container-box">
+    <div className='container-box'>
       <Box1 formObject={formObject} infoFromInput={data} />
       <Box2 handlefunction={handleInputPreview} />
     </div>
