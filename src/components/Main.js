@@ -14,16 +14,19 @@ let formObject = {
 };
 
 function Main(props) {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   const handleInputPreview = (value) => {
-    console.log(value)
-    setData(value)
-    console.log(data)
+    console.log(value);
+    setData(value);
+    console.log(data);
+  };
+  function handlePalette(value) {
+    console.log('Yo soy Main', value);
   }
   return (
-    <div className="container-box">
+    <div className='container-box'>
       <Box1 formObject={formObject} infoFromInput={data} />
-      <Box2 handlefunction={handleInputPreview} />
+      <Box2 handlefunction={handleInputPreview} handlePalette={handlePalette} />
     </div>
   );
 }
