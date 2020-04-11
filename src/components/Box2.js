@@ -10,8 +10,9 @@ import iconShare from '../images/share-alt-solid.svg';
 import '../stylesheets/Box2.scss';
 
 function Box2(props) {
-  const handleInputs = (value) => { props.handlefunction(value) }
-
+  const handleInputs = (value) => {
+    props.handlefunction(value);
+  };
 
   function handlePalettePreview(value) {
     console.log('Yo soy Box', value);
@@ -19,17 +20,20 @@ function Box2(props) {
   return (
     <ul class='container-box__two'>
       <li class='collapse'>
-        <Collapsable title='Diseña' icon={iconDesign} />
-        <Design handlePalettePreview={handlePalettePreview} />
+        <Collapsable title='Diseña' icon={iconDesign}>
+          <Design handlePalettePreview={handlePalettePreview} />
+        </Collapsable>
       </li>
-      <li class="collapse">
-        <Collapsable title="Rellena" icon={iconFill} />
-        <Fill handleInputsforFill={handleInputs} />
+      <li class='collapse'>
+        <Collapsable title='Rellena' icon={iconFill}>
+          <Fill handleInputsforFill={handleInputs} />
+        </Collapsable>
         {/* <Fill handleInputsforFill={props.handleInputFunction} /> */}
       </li>
       <li class='collapse'>
-        <Collapsable title='Comparte' icon={iconShare} />
-        <Share />
+        <Collapsable title='Comparte' icon={iconShare}>
+          <Share />
+        </Collapsable>
       </li>
     </ul>
   );
