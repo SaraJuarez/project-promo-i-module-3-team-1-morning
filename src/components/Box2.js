@@ -14,9 +14,6 @@ function Box2(props) {
     props.handlefunction(value);
   };
 
-  // function handlePalette(value) {
-  //   console.log('Yo soy Box', value);
-  // }
   return (
     <ul className='container-box__two'>
       <li className='collapse'>

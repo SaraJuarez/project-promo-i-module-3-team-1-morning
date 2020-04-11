@@ -14,18 +14,28 @@ let formObject = {
 };
 
 function Main(props) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
+  console.log('Soy data', data);
   const handleInputPreview = (value) => {
-    console.log(value);
-    setData(value);
-    console.log(data);
+    console.log('Ahoy', value);
+    const newData = {
+      ...data,
+      [value.name]: value.value,
+    };
+    setData(newData);
   };
-  function handlePalette(value) {
-    console.log('Yo soy Main', value);
-  }
+  const handlePalette = (value) => {
+    console.log('Yo soy Paleta', value);
+    const newData = {
+      ...data,
+      [value.name]: value.value,
+    };
+    setData(newData);
+  };
+
   return (
     <div className='container-box'>
-      <Box1 formObject={formObject} infoFromInput={data} />
+      <Box1 formObject={formObject} stateInfo={data} />
       <Box2 handlefunction={handleInputPreview} handlePalette={handlePalette} />
     </div>
   );

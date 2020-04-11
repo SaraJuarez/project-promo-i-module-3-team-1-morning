@@ -1,15 +1,10 @@
 import React from 'react';
-/* import {useState} from 'react'; */
 import '../stylesheets/Fill.scss';
 
 function Fill(props) {
   const getValue = (ev) => {
-    let writeValue = ev.target.value;
-    let writedType = ev.target.name;
-    props.handleInputsforFill({
-      value: writeValue,
-      type: writedType,
-    });
+    const htmlInput = ev.target;
+    props.handleInputsforFill(htmlInput);
   };
 
   return (
@@ -37,7 +32,7 @@ function Fill(props) {
       <label className='complete__form__label required' htmlFor='email'>
         Email
       </label>
-      <input className='complete__form__input js-form-input-email' type='email' name='email' placeholder='Ej: la_rogelia@gmail.com' required />
+      <input onChange={getValue} className='complete__form__input js-form-input-email' type='email' name='email' placeholder='Ej: la_rogelia@gmail.com' required />
       <label className='complete__form__label required' htmlFor='telephone'>
         Teléfono
       </label>
