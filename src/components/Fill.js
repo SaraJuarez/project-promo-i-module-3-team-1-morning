@@ -1,15 +1,31 @@
 import React from 'react';
 /* import {useState} from 'react'; */
 import '../stylesheets/Fill.scss';
+let htmlInput = {};
 
 function Fill(props) {
   const getValue = (ev) => {
-    let writeValue = ev.target.value;
-    let writedType = ev.target.name;
-    props.handleInputsforFill({
-      value: writeValue,
-      type: writedType,
-    });
+    htmlInput = ev.target;
+    props.handleInputsforFill(htmlInput);
+  };
+  //function evento al input ref file
+  const fr = new FileReader();
+  const myFileField = React.createRef();
+
+  const handleFilePicker = () => {
+    myFileField.current.click();
+  };
+  const uploadImage = (ev) => {
+    htmlInput = {[ev.target.name]: ''};
+    const myFile = ev.currentTarget.files[0];
+    fr.addEventListener('load', getImage);
+    fr.readAsDataURL(myFile);
+  };
+  const getImage = () => {
+    const image = fr.result;
+    htmlInput.photo = image;
+    /* console.log(htmlInput); */
+    props.handleInputforImg(htmlInput);
   };
 
   return (
@@ -26,10 +42,10 @@ function Fill(props) {
         Imagen de perfil
       </label>
       <div className="complete__form__image-fields">
-        <label htmlFor="photo" className="complete__form__image-fields__image-button-label">
+        <label htmlFor="photo" className="complete__form__image-fields__image-button-label" onClick={handleFilePicker}>
           Añadir imagen
         </label>
-        {/* <input className="js-input-invisible complete__form__image-fields__image-button-invisible" type="file" name="photo" accept="image/png, image/jpg" onchange="previewFile()" /> */}
+        <input className="js-input-invisible complete__form__image-fields__image-button-invisible" type="file" name="photo" accept="image/png, image/jpg" ref={myFileField} onChange={uploadImage} />
         <div className="js-divPicture complete__form__image-fields__mini-image-div">
           <img className="js-img complete__form__image-fields__mini-image-div-img" src="" alt="" />
         </div>

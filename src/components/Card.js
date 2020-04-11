@@ -4,15 +4,17 @@ import '../stylesheets/Card.scss';
 import rogelia from '../images/image-rogelia.jpg';
 
 function Card(props) {
+  console.log(props.properties);
+
   return (
     <section className="card js-card">
       <header className="card__title js-card-title">
         <div className="card__title__box js-card-title-box">
-          <h2 className="card__title__first js-card-title-first">{props.formObject.name || 'Nombre y Apellidos'}</h2>
-          <h3 className="card__title__second js-card-title-second">{props.formObject.job || 'Front-end developer'}</h3>
+          <h2 className="card__title__first js-card-title-first">{props.properties.name || 'Nombre y Apellidos'}</h2>
+          <h3 className="card__title__second js-card-title-second">{props.properties.job || 'Front-end developer'}</h3>
         </div>
       </header>
-      <img className="js-card-img card__img" src={rogelia} alt="card" title="card-image" />
+      <img className="js-card-img card__img" src={props.properties.photo || rogelia} alt="card" title="card-image" />
       <nav className="card__menu js-card-menu">
         <ul className="card__menu__links js-card-menu-links">
           <li className="card__menu__links__icon js-card-menu-links-icon">

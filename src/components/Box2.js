@@ -11,8 +11,10 @@ import '../stylesheets/Box2.scss';
 
 function Box2(props) {
   const handleInputs = (value) => {
-    /* console.log(value); */
     props.handlefunction(value);
+  };
+  const handleInputFile = (value) => {
+    props.handleSaveImg(value);
   };
 
   function handlePalettePreview(value) {
@@ -26,7 +28,7 @@ function Box2(props) {
       </li>
       <li className="collapse">
         <Collapsable title="Rellena" icon={iconFill} />
-        <Fill handleInputsforFill={handleInputs} />
+        <Fill handleInputsforFill={handleInputs} handleInputforImg={handleInputFile} />
         {/* <Fill handleInputsforFill={props.handleInputFunction} /> */}
       </li>
       <li className="collapse">

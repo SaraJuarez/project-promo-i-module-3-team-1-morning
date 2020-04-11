@@ -4,27 +4,36 @@ import Box2 from './Box2';
 import '../stylesheets/Main.scss';
 import {useState} from 'react';
 
-let formObject = {
+/* let formObject = {
   name: 'pipi',
   job: 'Front End Developer',
   email: 'pipi@gmail.com',
   tel: '644555334',
   linkedin: 'https://www.linkedin.com/in/beatrizfleon/',
   github: 'https://github.com/Beatrizfleon',
-};
+}; */
 
 function Main(props) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
 
   const handleInputPreview = (value) => {
-    console.log(value.value);
-    setData(value.value);
+    const newData = {
+      ...data,
+      [value.name]: value.value,
+    };
+    setData(newData);
   };
-  console.log(data);
+  const saveDataImg = (dtaImg) => {
+    const newImg = {
+      ...data,
+      photo: dtaImg.photo,
+    };
+    setData(newImg);
+  };
   return (
     <div className="container-box">
-      <Box1 formObject={formObject} infoFromInput={data} />
-      <Box2 handlefunction={handleInputPreview} />
+      <Box1 infoFromInput={data} />
+      <Box2 handlefunction={handleInputPreview} handleSaveImg={saveDataImg} />
     </div>
   );
 }
