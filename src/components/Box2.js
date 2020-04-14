@@ -18,7 +18,7 @@ function Box2(props) {
     <ul className='container-box__two'>
       <li className='collapse'>
         <Collapsable title='Diseña' icon={iconDesign} />
-        <Design handlePalette={props.handlePalette} />
+        <Design handlePalette={props.handlePalette} properties={props.stateInfo} />
       </li>
       <li className='collapse'>
         <Collapsable title='Rellena' icon={iconFill} />

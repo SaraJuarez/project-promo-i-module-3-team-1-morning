@@ -6,7 +6,7 @@ import '../stylesheets/Theme3.scss';
 import rogelia from '../images/image-rogelia.jpg';
 
 function Card(props) {
-  console.log('soy propers', props.properties);
+  // console.log('soy propers', props.properties);
   return (
     // <section className={`card js-card ${props.properties.palette === 'green' ? 'card--theme1' : 'card--theme2'}`}>
     <section className={`card js-card ${props.properties.palette === 'green' ? 'card--theme1' : props.properties.palette === 'red' ? 'card--theme2' : 'card--theme3'}`}>
