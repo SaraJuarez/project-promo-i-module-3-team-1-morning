@@ -4,6 +4,8 @@ import Reset from './Reset';
 import '../stylesheets/Box1.scss';
 
 function Box1(props) {
+  console.log(props.photo);
+
   return (
     <section className="principal container-box__one">
       <Reset />

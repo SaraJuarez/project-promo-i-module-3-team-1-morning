@@ -30,7 +30,7 @@ function Main(props) {
     };
     setData(newImg);
   };
-  console.log(data);
+  /* console.log(data); */
   return (
     <div className="container-box">
       <Box1 infoFromInput={data} />

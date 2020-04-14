@@ -33,16 +33,16 @@ class Collapsable extends React.Component {
 
     return (
       <div>
-        <div class="title-collapse js-title-collapse">
-          <div class="title-collapse__box">
-            <img class="title-collapse__box__icon" src={props.icon} alt="Icono" />
-            <h2 class="title-collapse__box__title">{props.title}</h2>
+        <div className="title-collapse js-title-collapse">
+          <div className="title-collapse__box">
+            <img className="title-collapse__box__icon" src={props.icon} alt="Icono" />
+            <h2 className="title-collapse__box__title">{props.title}</h2>
           </div>
           <div className={this.state.arrow} onClick={this.handleClick}>
-            <i class="fas fa-chevron-down title-collapse__arrow"></i>
+            <i className="fas fa-chevron-down title-collapse__arrow"></i>
           </div>
           <div className={this.state.display} onClick={this.handleClick}>
-            <i class="fas fa-chevron-up title-collapse__arrow"></i>
+            <i className="fas fa-chevron-up title-collapse__arrow"></i>
           </div>
         </div>
         <div className={`collapsable-content ${this.state.display}`}>{this.props.children}</div>

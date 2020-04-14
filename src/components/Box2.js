@@ -10,6 +10,7 @@ import iconShare from '../images/share-alt-solid.svg';
 import '../stylesheets/Box2.scss';
 
 function Box2(props) {
+  /* onsole.log(props); */
   const handleInputs = (value) => {
     props.handlefunction(value);
   };
@@ -21,19 +22,19 @@ function Box2(props) {
     console.log('Yo soy Box', value);
   }
   return (
-    <ul class="container-box__two">
-      <li class="collapse">
+    <ul className="container-box__two">
+      <li className="collapse">
         <Collapsable title="Diseña" icon={iconDesign}>
           <Design handlePalettePreview={handlePalettePreview} />
         </Collapsable>
       </li>
-      <li class="collapse">
+      <li className="collapse">
         <Collapsable title="Rellena" icon={iconFill}>
-          <Fill handleInputsforFill={handleInputs} />
+          <Fill handleInputsforFill={handleInputs} handleInputforImg={handleInputFile} photo={props.photo} />
         </Collapsable>
         {/* <Fill handleInputsforFill={props.handleInputFunction} /> */}
       </li>
-      <li class="collapse">
+      <li className="collapse">
         <Collapsable title="Comparte" icon={iconShare}>
           <Share />
         </Collapsable>
