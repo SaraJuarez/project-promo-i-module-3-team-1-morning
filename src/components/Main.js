@@ -16,10 +16,7 @@ import { useState } from 'react';
 function Main(props) {
   const [data, setData] = useState({ palette: 'green' });
   localStorage.setItem('userInfo', JSON.stringify(data));
-  // useEffect(()=>{
 
-  // }
-  // console.log('Soy data', data);
   const handleInputPreview = (value) => {
     const newData = {
       ...data,
