@@ -18,22 +18,22 @@ function Card(props) {
       <nav className="card__menu js-card-menu">
         <ul className="card__menu__links js-card-menu-links">
           <li className="card__menu__links__icon js-card-menu-links-icon">
-            <a className="card__menu__item js-a-mobile" href="/">
+            <a className="card__menu__item js-a-mobile" href={`tel: ${props.properties.phone}`}>
               <i className="fas fa-mobile-alt"></i>
             </a>
           </li>
           <li className="card__menu__links__icon js-card-menu-links-icon">
-            <a className="card__menu__item js-a-mail" href="/">
+            <a className="card__menu__item js-a-mail" href={props.properties.email}>
               <i className="far fa-envelope"></i>
             </a>
           </li>
           <li className="card__menu__links__icon js-card-menu-links-icon">
-            <a className="card__menu__item js-a-linkedin" href="/" target="_blank">
+            <a className="card__menu__item js-a-linkedin" href={props.properties.linkedin} target="_blank">
               <i className="fab fa-linkedin-in"></i>
             </a>
           </li>
           <li className="card__menu__links__icon js-card-menu-links-icon">
-            <a className="card__menu__item js-a-github" href="/" target="_blank">
+            <a className="card__menu__item js-a-github" href={props.properties.github} target="_blank">
               <i className="fab fa-github-alt"></i>
             </a>
           </li>
