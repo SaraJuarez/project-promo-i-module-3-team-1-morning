@@ -39,4 +39,13 @@ function Main(props) {
   );
 }
 
+//   return(
+//       <div className = "container-box" >
+//       <Box1 formObject={formObject} infoFromInput={data} />
+//       <Box2 handlefunction={handleInputPreview} />
+//       </div>
+//     );
+//   }
+// }
+
 export default Main;
