@@ -18,7 +18,7 @@ function Card(props) {
       <nav className="card__menu js-card-menu">
         <ul className="card__menu__links js-card-menu-links">
           <li className="card__menu__links__icon js-card-menu-links-icon">
-            <a className="card__menu__item js-a-mobile" href={`tel: ${props.properties.phone}`}>
+            <a className="card__menu__item js-a-mobile" href={`tel: ${props.properties.phone}`} target="_blank">
               <i className="fas fa-mobile-alt"></i>
             </a>
           </li>
