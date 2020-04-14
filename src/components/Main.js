@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Box1 from './Box1';
 import Box2 from './Box2';
 import '../stylesheets/Main.scss';
 import { useState } from 'react';
 
-let formObject = {
-  name: 'pipi',
-  job: 'Front End Developer',
-  email: 'pipi@gmail.com',
-  tel: '644555334',
-  linkedin: 'https://www.linkedin.com/in/beatrizfleon/',
-  github: 'https://github.com/Beatrizfleon',
-};
+//  let formObject = {
+//   name: 'pipi',
+//   job: 'Front End Developer',
+//   email: 'pipi@gmail.com',
+//   tel: '644555334',
+//   linkedin: 'https://www.linkedin.com/in/beatrizfleon/',
+//   github: 'https://github.com/Beatrizfleon',
+// };
 
 function Main(props) {
   const [data, setData] = useState({ palette: 'green' });
@@ -19,17 +19,8 @@ function Main(props) {
   // useEffect(()=>{
 
   // }
-  console.log('Soy data', data);
+  // console.log('Soy data', data);
   const handleInputPreview = (value) => {
-    // console.log('Ahoy', value);
-    const newData = {
-      ...data,
-      [value.name]: value.value,
-    };
-    setData(newData);
-  };
-  const handleUserInfo = (value) => {
-    // console.log('Yo soy Paleta', value);
     const newData = {
       ...data,
       [value.name]: value.value,
@@ -37,10 +28,26 @@ function Main(props) {
     setData(newData);
   };
 
+  const handleUserInfo = (value) => {
+    const newData = {
+      ...data,
+      [value.name]: value.value,
+    };
+    setData(newData);
+  };
+
+  const saveDataImg = (dtaImg) => {
+    const newImg = {
+      ...data,
+      photo: dtaImg.photo,
+    };
+    setData(newImg);
+  };
+
   return (
     <div className='container-box'>
-      <Box1 formObject={formObject} stateInfo={data} />
-      <Box2 handlefunction={handleInputPreview} handlePalette={handleUserInfo} stateInfo={data} />
+      <Box1 infoFromInput={data} />
+      <Box2 handlefunction={handleInputPreview} handlePalette={handleUserInfo} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
     </div>
   );
 }

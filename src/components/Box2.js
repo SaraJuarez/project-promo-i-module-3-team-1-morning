@@ -14,20 +14,26 @@ function Box2(props) {
     props.handlefunction(value);
   };
 
+  const handleInputFile = (value) => {
+    props.handleSaveImg(value);
+  };
+
   return (
     <ul className='container-box__two'>
       <li className='collapse'>
-        <Collapsable title='Diseña' icon={iconDesign} />
-        <Design handlePalette={props.handlePalette} properties={props.stateInfo} />
+        <Collapsable title='Diseña' icon={iconDesign}>
+          <Design handlePalette={props.handlePalette} properties={props.stateInfo} />
+        </Collapsable>
       </li>
       <li className='collapse'>
-        <Collapsable title='Rellena' icon={iconFill} />
-        <Fill handleInputsforFill={handleInputs} />
-        {/* <Fill handleInputsforFill={props.handleInputFunction} /> */}
+        <Collapsable title='Rellena' icon={iconFill}>
+          <Fill handleInputsforFill={handleInputs} handleInputforImg={handleInputFile} photo={props.photo} />
+        </Collapsable>
       </li>
       <li className='collapse'>
-        <Collapsable title='Comparte' icon={iconShare} />
-        <Share />
+        <Collapsable title='Comparte' icon={iconShare}>
+          <Share />
+        </Collapsable>
       </li>
     </ul>
   );
