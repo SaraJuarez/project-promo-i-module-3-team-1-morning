@@ -10,7 +10,10 @@ import iconShare from '../images/share-alt-solid.svg';
 import '../stylesheets/Box2.scss';
 
 function Box2(props) {
-  const handleInputs = (value) => { props.handlefunction(value) }
+  const handleInputs = (value) => {
+    console.log(value)
+    props.handlefunction(value)
+  }
 
 
   function handlePalettePreview(value) {
