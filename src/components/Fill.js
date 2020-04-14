@@ -42,15 +42,15 @@ function Fill(props) {
       <label className='complete__form__label required' htmlFor='telephone'>
         Teléfono
       </label>
-      <input className='complete__form__input js-form-input-tel' type='tel' name='phone' placeholder='Ej: 926 61 30 84' required />
+      <input onChange={getValue} className='complete__form__input js-form-input-tel' type='tel' name='phone' placeholder='Ej: 926 61 30 84' required />
       <label className='complete__form__label' htmlFor='linkedin'>
         Linkedin
       </label>
-      <input className='complete__form__input js-form-input-linkedin' type='text' name='linkedin' placeholder='Ej: linkedin.com/in/rogelia-doña' />
+      <input onChange={getValue} className='complete__form__input js-form-input-linkedin' type='text' name='linkedin' placeholder='Ej: linkedin.com/in/rogelia-doña' />
       <label className='complete__form__label' htmlFor='github'>
         Github
       </label>
-      <input className='complete__form__input js-form-input-github' type='text' name='github' placeholder='Ej: @doña-roG' />
+      <input onChange={getValue} className='complete__form__input js-form-input-github' type='text' name='github' placeholder='Ej: @doña-roG' />
     </form>
   );
 }
