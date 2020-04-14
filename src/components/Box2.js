@@ -21,19 +21,22 @@ function Box2(props) {
     console.log('Yo soy Box', value);
   }
   return (
-    <ul className="container-box__two">
-      <li className="collapse">
-        <Collapsable title="Diseña" icon={iconDesign} />
-        <Design handlePalettePreview={handlePalettePreview} />
+    <ul class="container-box__two">
+      <li class="collapse">
+        <Collapsable title="Diseña" icon={iconDesign}>
+          <Design handlePalettePreview={handlePalettePreview} />
+        </Collapsable>
       </li>
-      <li className="collapse">
-        <Collapsable title="Rellena" icon={iconFill} />
-        <Fill handleInputsforFill={handleInputs} handleInputforImg={handleInputFile} photo={props.photo} />
+      <li class="collapse">
+        <Collapsable title="Rellena" icon={iconFill}>
+          <Fill handleInputsforFill={handleInputs} />
+        </Collapsable>
         {/* <Fill handleInputsforFill={props.handleInputFunction} /> */}
       </li>
-      <li className="collapse">
-        <Collapsable title="Comparte" icon={iconShare} />
-        <Share />
+      <li class="collapse">
+        <Collapsable title="Comparte" icon={iconShare}>
+          <Share />
+        </Collapsable>
       </li>
     </ul>
   );
