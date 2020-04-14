@@ -16,15 +16,14 @@ function Fill(props) {
     myFileField.current.click();
   };
   const uploadImage = (ev) => {
-    htmlInput = {[ev.target.name]: ''};
     const myFile = ev.currentTarget.files[0];
     fr.addEventListener('load', getImage);
     fr.readAsDataURL(myFile);
   };
+
   const getImage = () => {
     const image = fr.result;
     htmlInput.photo = image;
-    /* console.log(htmlInput); */
     props.handleInputforImg(htmlInput);
   };
 
@@ -47,7 +46,7 @@ function Fill(props) {
         </label>
         <input className="js-input-invisible complete__form__image-fields__image-button-invisible" type="file" name="photo" accept="image/png, image/jpg" ref={myFileField} onChange={uploadImage} />
         <div className="js-divPicture complete__form__image-fields__mini-image-div">
-          <img className="js-img complete__form__image-fields__mini-image-div-img" src="" alt="" />
+          <img className="js-img complete__form__image-fields__mini-image-div-img" src={props.photo} alt="" />
         </div>
       </div>
       <label className="complete__form__label required" htmlFor="email">

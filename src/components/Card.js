@@ -4,7 +4,7 @@ import '../stylesheets/Card.scss';
 import rogelia from '../images/image-rogelia.jpg';
 
 function Card(props) {
-  console.log(props.properties);
+  /*  console.log(props.properties); */
 
   return (
     <section className="card js-card">

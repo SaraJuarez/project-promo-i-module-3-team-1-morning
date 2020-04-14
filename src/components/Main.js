@@ -30,10 +30,11 @@ function Main(props) {
     };
     setData(newImg);
   };
+  console.log(data);
   return (
     <div className="container-box">
       <Box1 infoFromInput={data} />
-      <Box2 handlefunction={handleInputPreview} handleSaveImg={saveDataImg} />
+      <Box2 handlefunction={handleInputPreview} handleSaveImg={saveDataImg} photo={data.photo} />
     </div>
   );
 }

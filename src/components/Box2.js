@@ -28,7 +28,7 @@ function Box2(props) {
       </li>
       <li className="collapse">
         <Collapsable title="Rellena" icon={iconFill} />
-        <Fill handleInputsforFill={handleInputs} handleInputforImg={handleInputFile} />
+        <Fill handleInputsforFill={handleInputs} handleInputforImg={handleInputFile} photo={props.photo} />
         {/* <Fill handleInputsforFill={props.handleInputFunction} /> */}
       </li>
       <li className="collapse">
