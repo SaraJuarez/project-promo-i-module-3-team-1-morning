@@ -10,7 +10,7 @@ function Card(props) {
       <header className='card__title js-card-title'>
         <div className='card__title__box js-card-title-box'>
           <h2 className='card__title__first js-card-title-first'>{props.properties.name || 'Nombre y Apellidos'}</h2>
-          <h3 className='card__title__second js-card-title-second'></h3>
+          <h3 className='card__title__second js-card-title-second'>{props.properties.job || 'Empleo'}</h3>
         </div>
       </header>
       <img className='js-card-img card__img' src={rogelia} alt='card' title='card-image' />
