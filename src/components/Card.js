@@ -18,22 +18,22 @@ function Card(props) {
       <nav className='card__menu js-card-menu'>
         <ul className='card__menu__links js-card-menu-links'>
           <li className='card__menu__links__icon js-card-menu-links-icon'>
-            <a className='card__menu__item js-a-mobile' href={`tel: ${props.properties.phone}`} target='_blank'>
+            <a className='card__menu__item js-a-mobile' href={`tel: ${props.properties.phone}`} target='_blank' rel='noopener noreferrer'>
               <i className='fas fa-mobile-alt'></i>
             </a>
           </li>
           <li className='card__menu__links__icon js-card-menu-links-icon'>
-            <a className='card__menu__item js-a-mail' href={props.properties.email}>
+            <a className='card__menu__item js-a-mail' href={`mailto: ${props.properties.email}`} target='_blank' rel='noopener noreferrer'>
               <i className='far fa-envelope'></i>
             </a>
           </li>
           <li className='card__menu__links__icon js-card-menu-links-icon'>
-            <a className='card__menu__item js-a-linkedin' href={props.properties.linkedin} target='_blank'>
+            <a className='card__menu__item js-a-linkedin' href={`https://www.linkedin.com/in/${props.properties.linkedin}`} target='_blank' rel='noopener noreferrer'>
               <i className='fab fa-linkedin-in'></i>
             </a>
           </li>
           <li className='card__menu__links__icon js-card-menu-links-icon'>
-            <a className='card__menu__item js-a-github' href={props.properties.github} target='_blank'>
+            <a className='card__menu__item js-a-github' href={`https://github.com/${props.properties.github}`} target='_blank' rel='noopener noreferrer'>
               <i className='fab fa-github-alt'></i>
             </a>
           </li>
