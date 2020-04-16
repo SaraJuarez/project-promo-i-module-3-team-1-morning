@@ -7,7 +7,6 @@ function Box1(props) {
   return (
     <section className='principal container-box__one'>
       <Reset />
-      {/* <Card formObject={props.formObject} /> */}
       <Card properties={props.infoFromInput} photo={props.photo} />
     </section>
   );

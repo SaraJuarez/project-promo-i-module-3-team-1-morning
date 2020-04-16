@@ -47,7 +47,13 @@ function Main(props) {
   return (
     <div className='container-box'>
       <Box1 infoFromInput={data} />
-      <Box2 handlefunction={handleUserInfo} handlePalette={handleUserInfo} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
+      <Box2
+        handlefunction={handleUserInfo}
+        handlePalette={handleUserInfo}
+        stateInfo={data}
+        handleSaveImg={saveDataImg}
+        photo={data.photo}
+      />
     </div>
   );
 }
