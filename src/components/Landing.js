@@ -7,6 +7,7 @@ import iconShare from '../images/share-alt-solid.svg';
 import '../stylesheets/Landing.scss';
 import CardWrapper from './CardWrapper.js';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 function Landing(props) {
   return (
@@ -54,9 +55,9 @@ function Landing(props) {
           </div>
         </section>
         <div className='container'>
-          <a className='container__btn' href={CardWrapper}>
+          <Link to='/CardWrapper' className='container__btn'>
             Comenzar
-          </a>
+          </Link>
         </div>
       </main>
       <footer>

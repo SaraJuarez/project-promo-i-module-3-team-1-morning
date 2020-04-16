@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       <Switch>
+        <Route exact path='/' component={Landing} />
         <Route path='/CardWrapper' component={CardWrapper} />
-        <Route path='/' component={Landing} />
       </Switch>
     </>
   );
