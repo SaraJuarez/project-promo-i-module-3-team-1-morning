@@ -10,12 +10,12 @@ import CardWrapper from './CardWrapper';
 
 function App() {
   return (
-    <div className='App'>
+    <>
       <Switch>
+        <Route path='/CardWrapper' component={CardWrapper} />
         <Route path='/' component={Landing} />
-        <Route path='/Card' component={CardWrapper} />
       </Switch>
-    </div>
+    </>
   );
 }
 

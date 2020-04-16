@@ -5,91 +5,74 @@ import iconFill from '../images/keyboard-regular.svg';
 import iconDesign from '../images/object-ungroup-regular.svg';
 import iconShare from '../images/share-alt-solid.svg';
 import '../stylesheets/Landing.scss';
+import CardWrapper from './CardWrapper.js';
+import Footer from './Footer';
 
 function Landing(props) {
   return (
-    <div>
-      {/* <head>
-        <meta charset='UTF-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Adalab Web Starter Kit</title>
-        <link rel='icon' href='./favicon.png' />
-        <link
-          href='https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900&display=swap'
-          rel='stylesheet'
-        />
-        <link
-          href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap'
-          rel='stylesheet'
-        />
-        <link
-          href='https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'
-          rel='stylesheet'
-        />
-        <link rel='stylesheet' href='./assets/css/main.css' />
-      </head> */}
-      <body>
-        <main class='main-landing'>
-          <div class='img-container'>
+    <body>
+      <main className='main-landing'>
+        <div className='img-container'>
+          <img
+            className='img-container__image'
+            src={imageHeader}
+            alt='Logotipo de Awasome profile-cards'
+            title='Awasome profile-cards'
+          />
+        </div>
+        <h1 className='main-landing__title'>Crea tu tarjeta de visita</h1>
+        <h3 className='main-landing__subtitle'>
+          Crea mejores contactos profesionales de forma fácil y cómoda
+        </h3>
+        <section className='info'>
+          <div className='info__icon-container'>
             <img
-              class='img-container__image'
-              src={imageHeader}
-              alt='Logotipo de Awasome profile-cards'
-              title='Awasome profile-cards'
+              className='info__icon'
+              src={iconDesign}
+              title='Diseña'
+              alt='Icono de diseña'
             />
+            <h5 className='info__text'>Diseña</h5>
           </div>
-          <h1 class='main-landing__title'>Crea tu tarjeta de visita</h1>
-          <h3 class='main-landing__subtitle'>
-            Crea mejores contactos profesionales de forma fácil y cómoda
-          </h3>
-          <section class='info'>
-            <div class='info__icon-container'>
-              <img
-                class='info__icon'
-                src={iconDesign}
-                title='Diseña'
-                alt='Icono de diseña'
-              />
-              <h5 class='info__text'>Diseña</h5>
-            </div>
-            <div class='info__icon-container'>
-              <img
-                class='info__icon'
-                src={iconFill}
-                title='Rellena'
-                alt='Icono de rellena'
-              />
-              <h5 class='info__text'>Rellena</h5>
-            </div>
-            <div class='info__icon-container'>
-              <img
-                class='info__icon'
-                src={iconShare}
-                title='Comparte'
-                alt='Icono de comparte'
-              />
-              <h5 class='info__text'>Comparte</h5>
-            </div>
-          </section>
-          <div class='container'>
-            <a class='container__btn' href='user-interface.html'>
-              Comenzar
-            </a>
-          </div>
-        </main>
-        <footer>
-          <div class='footer'>
-            <p class='footer__text'>Awesome profile-cards @2020</p>
+          <div className='info__icon-container'>
             <img
-              class='footer__logo'
-              src={logoAdalab}
-              title='Logo Adalab'
-              alt='Logo de Adalab'
+              className='info__icon'
+              src={iconFill}
+              title='Rellena'
+              alt='Icono de rellena'
             />
+            <h5 className='info__text'>Rellena</h5>
           </div>
-        </footer>
-      </body>
-    </div>
+          <div className='info__icon-container'>
+            <img
+              className='info__icon'
+              src={iconShare}
+              title='Comparte'
+              alt='Icono de comparte'
+            />
+            <h5 className='info__text'>Comparte</h5>
+          </div>
+        </section>
+        <div className='container'>
+          <a className='container__btn' href={CardWrapper}>
+            Comenzar
+          </a>
+        </div>
+      </main>
+      <footer>
+        <Footer />
+
+        {/* <div className='footer'>
+          <p className='footer__text'>Awesome profile-cards @2020</p>
+          <img
+            className='footer__logo'
+            src={logoAdalab}
+            title='Logo Adalab'
+            alt='Logo de Adalab'
+          />
+        </div> */}
+      </footer>
+    </body>
   );
 }
 export default Landing;
