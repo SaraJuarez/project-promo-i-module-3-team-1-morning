@@ -2,7 +2,7 @@ import React from 'react';
 import Box1 from './Box1';
 import Box2 from './Box2';
 import '../stylesheets/Main.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 //  let formObject = {
 //   name: 'pipi',
@@ -15,7 +15,13 @@ import { useState } from 'react';
 
 function Main(props) {
   const [data, setData] = useState({ palette: 'green' });
-  localStorage.setItem('userInfo', JSON.stringify(data));
+
+  useEffect(() => {
+    console.log('holi')
+    localStorage.setItem('userInfo', JSON.stringify(data));
+  }, []);
+
+  // localStorage.setItem('userInfo', JSON.stringify(data));
 
   const handleInputPreview = (value) => {
     const newData = {
