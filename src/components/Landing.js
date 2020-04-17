@@ -62,16 +62,6 @@ function Landing(props) {
       </main>
       <footer>
         <Footer />
-
-        {/* <div className='footer'>
-          <p className='footer__text'>Awesome profile-cards @2020</p>
-          <img
-            className='footer__logo'
-            src={logoAdalab}
-            title='Logo Adalab'
-            alt='Logo de Adalab'
-          />
-        </div> */}
       </footer>
     </body>
   );
