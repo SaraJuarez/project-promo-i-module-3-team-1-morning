@@ -12,7 +12,6 @@ import '../stylesheets/Box2.scss';
 class Box2 extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       disena: true, //la pesteña diseña está abierta al inicio
       rellena: false,
@@ -90,19 +89,19 @@ class Box2 extends React.Component {
 
   render() {
     return (
-      <ul className='container-box__two'>
-        <li className='collapse'>
-          <Collapsable title='Diseña' icon={iconDesign} handleCollapsable={this.handleDisena} isOpen={this.state.disena}>
+      <ul className="container-box__two">
+        <li className="collapse">
+          <Collapsable title="Diseña" icon={iconDesign} handleCollapsable={this.handleDisena} isOpen={this.state.disena}>
             <Design handlePalette={this.props.handlePalette} properties={this.props.stateInfo} />
           </Collapsable>
         </li>
-        <li className='collapse'>
-          <Collapsable title='Rellena' icon={iconFill} handleCollapsable={this.handleRellena} isOpen={this.state.rellena}>
+        <li className="collapse">
+          <Collapsable title="Rellena" icon={iconFill} handleCollapsable={this.handleRellena} isOpen={this.state.rellena}>
             <Fill handleInputsforFill={this.handleInputs} handleInputforImg={this.handleInputFile} photo={this.props.photo} />
           </Collapsable>
         </li>
-        <li className='collapse'>
-          <Collapsable title='Comparte' icon={iconShare} handleCollapsable={this.handleComparte} isOpen={this.state.comparte}>
+        <li className="collapse">
+          <Collapsable title="Comparte" icon={iconShare} handleCollapsable={this.handleComparte} isOpen={this.state.comparte}>
             <Share />
           </Collapsable>
         </li>

@@ -2,12 +2,15 @@ import React from 'react';
 import Box1 from './Box1';
 import Box2 from './Box2';
 import '../stylesheets/Main.scss';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 function Main(props) {
   const [data, setData] = useState({palette: 'green'});
-
-  localStorage.setItem('userInfo', JSON.stringify(data));
+  /* useEffect(() => {
+    console.log('Estoy al principio de useEffect');
+    let getLocalStore = JSON.parse(localStorage.getItem('userInfo'));
+    setData(getLocalStore);
+  }, []); */
 
   // const handleInputPreview = (value) => {
   //   const newData = {
@@ -23,6 +26,7 @@ function Main(props) {
       [value.name]: value.value,
     };
     setData(newData);
+    setLocalStorage();
   };
 
   const saveDataImg = (dtaImg) => {
@@ -31,9 +35,12 @@ function Main(props) {
       photo: dtaImg.photo,
     };
     setData(newImg);
+    setLocalStorage();
   };
 
-  console.log(data);
+  const setLocalStorage = () => {
+    localStorage.setItem('userInfo', JSON.stringify(data));
+  };
 
   return (
     <div className="container-box">
