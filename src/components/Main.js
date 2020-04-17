@@ -15,15 +15,16 @@ import {useState} from 'react';
 
 function Main(props) {
   const [data, setData] = useState({palette: 'green'});
+
   localStorage.setItem('userInfo', JSON.stringify(data));
 
-  const handleInputPreview = (value) => {
-    const newData = {
-      ...data,
-      [value.name]: value.value,
-    };
-    setData(newData);
-  };
+  // const handleInputPreview = (value) => {
+  //   const newData = {
+  //     ...data,
+  //     [value.name]: value.value,
+  //   };
+  //   setData(newData);
+  // };
 
   const handleUserInfo = (value) => {
     const newData = {
@@ -41,10 +42,12 @@ function Main(props) {
     setData(newImg);
   };
 
+  console.log(data);
+
   return (
     <div className="container-box">
       <Box1 infoFromInput={data} />
-      <Box2 handlefunction={handleInputPreview} handlePalette={handleUserInfo} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
+      <Box2 handlefunction={handleUserInfo} handlePalette={handleUserInfo} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
     </div>
   );
 }
