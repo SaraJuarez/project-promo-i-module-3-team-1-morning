@@ -9,34 +9,106 @@ import iconShare from '../images/share-alt-solid.svg';
 
 import '../stylesheets/Box2.scss';
 
-function Box2(props) {
-  const handleInputs = (value) => {
-    props.handlefunction(value);
+class Box2 extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      disena: true, //la pesteña diseña está abierta al inicio
+      rellena: false,
+      comparte: false,
+    };
+
+    this.handleDisena = this.handleDisena.bind(this);
+    this.handleRellena = this.handleRellena.bind(this);
+    this.handleComparte = this.handleComparte.bind(this);
+    this.handleInputs = this.handleInputs.bind(this);
+    this.handleInputFile = this.handleInputFile.bind(this);
+  }
+
+  handleInputs = (value) => {
+    this.props.handlefunction(value);
   };
 
-  const handleInputFile = (value) => {
-    props.handleSaveImg(value);
+  handleInputFile = (value) => {
+    this.props.handleSaveImg(value);
   };
 
-  return (
-    <ul className='container-box__two'>
-      <li className='collapse'>
-        <Collapsable title='Diseña' icon={iconDesign}>
-          <Design handlePalette={props.handlePalette} properties={props.stateInfo} />
-        </Collapsable>
-      </li>
-      <li className='collapse'>
-        <Collapsable title='Rellena' icon={iconFill}>
-          <Fill handleInputsforFill={handleInputs} handleInputforImg={handleInputFile} photo={props.photo} />
-        </Collapsable>
-      </li>
-      <li className='collapse'>
-        <Collapsable title='Comparte' icon={iconShare}>
-          <Share />
-        </Collapsable>
-      </li>
-    </ul>
-  );
+  handleDisena() {
+    console.log('Se ha clickado en diseña');
+
+    if (this.state.disena === true) {
+      this.setState({
+        disena: false,
+        rellena: false,
+        comparte: false,
+      });
+    } else {
+      this.setState({
+        disena: true,
+        rellena: false,
+        comparte: false,
+      });
+    }
+  }
+
+  handleRellena() {
+    console.log('Se ha clickado en rellena');
+
+    if (this.state.rellena) {
+      this.setState({
+        disena: false,
+        rellena: false,
+        comparte: false,
+      });
+    } else {
+      this.setState({
+        disena: false,
+        rellena: true,
+        comparte: false,
+      });
+    }
+  }
+
+  handleComparte() {
+    console.log('Se ha clickado en comparte');
+
+    if (this.state.comparte) {
+      this.setState({
+        disena: false,
+        rellena: false,
+        comparte: false,
+      });
+    } else {
+      this.setState({
+        disena: false,
+        rellena: false,
+        comparte: true,
+      });
+    }
+  }
+
+  render() {
+    return (
+      <ul className='container-box__two'>
+        <li className='collapse'>
+          <Collapsable title='Diseña' icon={iconDesign} handleCollapsable={this.handleDisena} isOpen={this.state.disena}>
+            <Design handlePalette={this.props.handlePalette} properties={this.props.stateInfo} />
+          </Collapsable>
+        </li>
+        <li className='collapse'>
+          <Collapsable title='Rellena' icon={iconFill} handleCollapsable={this.handleRellena} isOpen={this.state.rellena}>
+            <Fill handleInputsforFill={this.handleInputs} handleInputforImg={this.handleInputFile} photo={this.props.photo} />
+          </Collapsable>
+        </li>
+        <li className='collapse'>
+          <Collapsable title='Comparte' icon={iconShare} handleCollapsable={this.handleComparte} isOpen={this.state.comparte}>
+            <Share />
+          </Collapsable>
+        </li>
+      </ul>
+    );
+  }
 }
 
 export default Box2;
