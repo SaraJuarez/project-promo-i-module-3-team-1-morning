@@ -17,7 +17,7 @@ function Main(props) {
   const [data, setData] = useState({ palette: 'green' });
 
   useEffect(() => {
-    console.log('holi')
+    // when data have anything, me haces lo siguiente
     localStorage.setItem('userInfo', JSON.stringify(data));
   }, []);
 
