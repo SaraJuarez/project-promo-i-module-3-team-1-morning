@@ -2,10 +2,10 @@ import React from 'react';
 import Box1 from './Box1';
 import Box2 from './Box2';
 import '../stylesheets/Main.scss';
-import { useState } from 'react';
+import {useState} from 'react';
 
 function Main(props) {
-  const [data, setData] = useState({ palette: 'green' });
+  const [data, setData] = useState({palette: 'green'});
 
   localStorage.setItem('userInfo', JSON.stringify(data));
 
@@ -36,15 +36,9 @@ function Main(props) {
   console.log(data);
 
   return (
-    <div className='container-box'>
+    <div className="container-box">
       <Box1 infoFromInput={data} />
-      <Box2
-        handlefunction={handleUserInfo}
-        handlePalette={handleUserInfo}
-        stateInfo={data}
-        handleSaveImg={saveDataImg}
-        photo={data.photo}
-      />
+      <Box2 handlefunction={handleUserInfo} handlePalette={handleUserInfo} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
     </div>
   );
 }
