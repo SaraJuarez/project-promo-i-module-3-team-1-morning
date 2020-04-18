@@ -8,7 +8,7 @@ function Share(props) {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleCreateCard = (info) => {
-    //mostrar el spinner
+    //mostrar el "loader"
     setIsLoading(true);
     fetchUrl(info)
       .then(function (resp) {
@@ -16,7 +16,7 @@ function Share(props) {
       })
       .then(function (result) {
         setUrl(result.cardURL);
-        //ocultar el spinner
+        //ocultar el "loader"
         setIsLoading(false);
       })
       .catch(function (error) {
