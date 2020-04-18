@@ -82,6 +82,7 @@ class Box2 extends React.Component {
   }
 
   render() {
+    console.log('this.props', this.props.stateInfo);
     return (
       <ul className='container-box__two'>
         <li className='collapse'>
@@ -91,7 +92,7 @@ class Box2 extends React.Component {
         </li>
         <li className='collapse'>
           <Collapsable title='Rellena' icon={iconFill} handleCollapsable={this.handleRellena} isOpen={this.state.rellena}>
-            <Fill handleInputsforFill={this.handleInputs} handleInputforImg={this.handleInputFile} photo={this.props.photo} />
+            <Fill handleInputsforFill={this.handleInputs} handleInputforImg={this.handleInputFile} photo={this.props.photo} properties={this.props.stateInfo} />
           </Collapsable>
         </li>
         <li className='collapse'>
