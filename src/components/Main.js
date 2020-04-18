@@ -2,10 +2,10 @@ import React from 'react';
 import Box1 from './Box1';
 import Box2 from './Box2';
 import '../stylesheets/Main.scss';
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 function Main(props) {
-  const [data, setData] = useState({palette: 'green'});
+  const [data, setData] = useState({ palette: 'green' });
   /* useEffect(() => {
     console.log('Estoy al principio de useEffect');
     let getLocalStore = JSON.parse(localStorage.getItem('userInfo'));
@@ -26,7 +26,9 @@ function Main(props) {
       [value.name]: value.value,
     };
     setData(newData);
-    setLocalStorage();
+    // setLocalStorage();
+
+    console.log(newData);
   };
 
   const saveDataImg = (dtaImg) => {
@@ -35,7 +37,9 @@ function Main(props) {
       photo: dtaImg.photo,
     };
     setData(newImg);
-    setLocalStorage();
+    // setLocalStorage();
+
+    console.log(newImg);
   };
 
   const setLocalStorage = () => {
@@ -43,7 +47,7 @@ function Main(props) {
   };
 
   return (
-    <div className="container-box">
+    <div className='container-box'>
       <Box1 infoFromInput={data} />
       <Box2 handlefunction={handleUserInfo} handlePalette={handleUserInfo} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
     </div>

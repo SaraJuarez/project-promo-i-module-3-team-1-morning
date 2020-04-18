@@ -34,8 +34,6 @@ class Box2 extends React.Component {
   };
 
   handleDisena() {
-    console.log('Se ha clickado en diseña');
-
     if (this.state.disena === true) {
       this.setState({
         disena: false,
@@ -52,8 +50,6 @@ class Box2 extends React.Component {
   }
 
   handleRellena() {
-    console.log('Se ha clickado en rellena');
-
     if (this.state.rellena) {
       this.setState({
         disena: false,
@@ -70,8 +66,6 @@ class Box2 extends React.Component {
   }
 
   handleComparte() {
-    console.log('Se ha clickado en comparte');
-
     if (this.state.comparte) {
       this.setState({
         disena: false,
@@ -89,20 +83,20 @@ class Box2 extends React.Component {
 
   render() {
     return (
-      <ul className="container-box__two">
-        <li className="collapse">
-          <Collapsable title="Diseña" icon={iconDesign} handleCollapsable={this.handleDisena} isOpen={this.state.disena}>
+      <ul className='container-box__two'>
+        <li className='collapse'>
+          <Collapsable title='Diseña' icon={iconDesign} handleCollapsable={this.handleDisena} isOpen={this.state.disena}>
             <Design handlePalette={this.props.handlePalette} properties={this.props.stateInfo} />
           </Collapsable>
         </li>
-        <li className="collapse">
-          <Collapsable title="Rellena" icon={iconFill} handleCollapsable={this.handleRellena} isOpen={this.state.rellena}>
+        <li className='collapse'>
+          <Collapsable title='Rellena' icon={iconFill} handleCollapsable={this.handleRellena} isOpen={this.state.rellena}>
             <Fill handleInputsforFill={this.handleInputs} handleInputforImg={this.handleInputFile} photo={this.props.photo} />
           </Collapsable>
         </li>
-        <li className="collapse">
-          <Collapsable title="Comparte" icon={iconShare} handleCollapsable={this.handleComparte} isOpen={this.state.comparte}>
-            <Share />
+        <li className='collapse'>
+          <Collapsable title='Comparte' icon={iconShare} handleCollapsable={this.handleComparte} isOpen={this.state.comparte}>
+            <Share stateInfo={this.props.stateInfo} />
           </Collapsable>
         </li>
       </ul>

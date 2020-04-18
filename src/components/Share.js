@@ -1,26 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../stylesheets/Share.scss';
+import ShareCard from './ShareCard';
+import fetchUrl from '../services/fetchUrl';
 
 function Share(props) {
+  const [url, setUrl] = useState('');
+
+  const handleCreateCard = (info) => {
+    fetchUrl(info)
+      .then(function (resp) {
+        return resp.json();
+      })
+      .then(function (result) {
+        setUrl(result.cardURL);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   return (
-    <div className='share__button share__button hidden js-share__button'>
-      <button className='share__button__enabled js-button'>
+    <div className='share__button share__button js-share__button'>
+      <button className='share__button__enabled js-button' onClick={() => handleCreateCard(props.stateInfo)}>
         <i className='far fa-address-card'></i>
         <h2 className='share__button__title'>Crear tarjeta</h2>
       </button>
-
-      <div className='share__card js-share__card hidden'>
-        <span className='share__card__text'>La tarjeta ha sido creada:</span>
-        {/* <a href='/' className='share__card__link js-share-link'></a> */}
-        {/* Reemplazar la URL a compartir por la http de google  */}
-        <a
-          href='/'
-          target='_blank'
-          className='share__card__twitter js-share-button'
-        >
-          <i className='fab fa-twitter'></i>Compartir en twitter
-        </a>
-      </div>
+      <ShareCard isShowing={url !== ''} cardURL={url} />
     </div>
   );
 }
