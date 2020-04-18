@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 function Main(props) {
   //Establecemos un 'estado inicial' del que partir si no tenemos datos/los borramos
-  const initialState = { palette: 'green' };
+  const initialState = { palette: 1 };
   const [data, setData] = useState(initialState);
   //Consultamos si hay info guardada en el local, la recuperamos
   useEffect(() => {
@@ -21,6 +21,14 @@ function Main(props) {
     localStorage.setItem('userInfo', JSON.stringify(data));
     //Metemos data en el 'famoso' array vacío para que useEffect se ejecute cada vez que haya cambios en ella
   }, [data]);
+
+  const handlePalette = (value) => {
+    const newData = {
+      ...data,
+      [value.name]: parseInt(value.value),
+    };
+    setData(newData);
+  };
 
   const handleUserInfo = (value) => {
     const newData = {
@@ -41,7 +49,7 @@ function Main(props) {
   return (
     <div className='container-box'>
       <Box1 infoFromInput={data} />
-      <Box2 handlefunction={handleUserInfo} handlePalette={handleUserInfo} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
+      <Box2 handlefunction={handleUserInfo} handlePalette={handlePalette} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
     </div>
   );
 }

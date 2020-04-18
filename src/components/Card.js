@@ -7,7 +7,7 @@ import rogelia from '../images/image-rogelia.jpg';
 
 function Card(props) {
   return (
-    <section className={`card js-card ${props.properties.palette === 'green' ? 'card--theme1' : props.properties.palette === 'red' ? 'card--theme2' : 'card--theme3'}`}>
+    <section className={`card js-card ${props.properties.palette === 1 ? 'card--theme1' : props.properties.palette === 2 ? 'card--theme2' : 'card--theme3'}`}>
       <header className='card__title js-card-title'>
         <div className='card__title__box js-card-title-box'>
           <h2 className='card__title__first js-card-title-first'>{props.properties.name || 'Nombre y Apellidos'}</h2>
