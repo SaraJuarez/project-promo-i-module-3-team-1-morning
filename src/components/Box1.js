@@ -6,7 +6,7 @@ import '../stylesheets/Box1.scss';
 function Box1(props) {
   return (
     <section className='principal container-box__one'>
-      <Reset />
+      <Reset functionReset={props.functionReset} />
       <Card properties={props.infoFromInput} photo={props.photo} />
     </section>
   );

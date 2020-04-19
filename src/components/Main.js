@@ -45,10 +45,17 @@ function Main(props) {
     };
     setData(newImg);
   };
+
+  const handleReset = (ev) => {
+    setData({});
+  }
+
+
+
   console.log('data contains', data);
   return (
     <div className='container-box'>
-      <Box1 infoFromInput={data} />
+      <Box1 functionReset={handleReset} infoFromInput={data} />
       <Box2 handlefunction={handleUserInfo} handlePalette={handlePalette} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
     </div>
   );
