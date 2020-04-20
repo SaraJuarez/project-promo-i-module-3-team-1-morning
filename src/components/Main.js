@@ -47,7 +47,7 @@ function Main() {
   };
 
   const handleReset = (ev) => {
-    setData({});
+    setData(initialState);
   };
 
   return (
