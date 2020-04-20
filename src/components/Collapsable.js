@@ -20,12 +20,12 @@ class Collapsable extends React.Component {
 
     return (
       <div>
-        <div className='title-collapse js-title-collapse'>
+        <div className='title-collapse js-title-collapse' onClick={this.handleClick}>
           <div className='title-collapse__box'>
             <img className='title-collapse__box__icon' src={this.props.icon} alt='Icono' />
             <h2 className='title-collapse__box__title'>{this.props.title}</h2>
           </div>
-          <div onClick={this.handleClick}>
+          <div>
             <i className={`fas ${arrow} title-collapse__arrow`}></i>
           </div>
         </div>
