@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class GetAvatar extends Component {
   constructor(props) {
@@ -28,29 +28,29 @@ class GetAvatar extends Component {
   }
 
   getPreview(isDefault, image) {
-    return !isDefault ? {backgroundImage: `url(${image})`} : {};
+    return !isDefault ? { backgroundImage: `url(${image})` } : {};
   }
 
   render() {
-    const {isAvatarDefault, avatar} = this.props;
+    const { isAvatarDefault, avatar } = this.props;
     return (
-      <div className="get-avatar">
-        <button className="get-avatar__trigger" type="button" onClick={this.handleFilePicker}>
+      <div className='get-avatar'>
+        <button className='get-avatar__trigger' type='button' onClick={this.handleFilePicker}>
           Get IMAGE!
         </button>
 
-        <input type="file" ref={this.myFileField} className="get-avatar__upload-field" onChange={this.uploadImage} />
+        <input type='file' ref={this.myFileField} className='get-avatar__upload-field' onChange={this.uploadImage} />
 
-        <div className="get-avatar__preview" style={this.getPreview(isAvatarDefault, avatar)}></div>
+        <div className='get-avatar__preview' style={this.getPreview(isAvatarDefault, avatar)}></div>
       </div>
     );
   }
 }
 
-/* GetAvatar.propTypes = {
+GetAvatar.propTypes = {
   isAvatarDefault: PropTypes.bool.isRequired,
   avatar: PropTypes.string.isRequired,
   updateAvatar: PropTypes.func.isRequired,
-}; */
+};
 
 export default GetAvatar;

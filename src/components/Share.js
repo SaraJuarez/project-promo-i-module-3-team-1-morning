@@ -15,6 +15,8 @@ function Share(props) {
         return resp.json();
       })
       .then(function (result) {
+        console.log('Resultado', result);
+
         setUrl(result.cardURL);
         //ocultar el "loader"
         setIsLoading(false);
@@ -30,7 +32,7 @@ function Share(props) {
         <i className='far fa-address-card'></i>
         <h2 className='share__button__title'>Crear tarjeta</h2>
       </button>
-      <div class={`loader ${loaderStyle}`}></div>
+      <div className={`loader ${loaderStyle}`}></div>
 
       <ShareCard isShowing={url !== ''} cardURL={url} />
     </div>

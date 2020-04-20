@@ -10,7 +10,7 @@ function ShareCard(props) {
         {props.cardURL}
       </a>
 
-      <a href={`https://twitter.com/intent/tweet?text=Mi+tarjeta+se+ha+creado+${props.cardURL}`} target='_blank' className='share__card__twitter js-share-button'>
+      <a href={`https://twitter.com/intent/tweet?text=Mi+tarjeta+se+ha+creado+${props.cardURL}`} target='_blank' rel='noopener noreferrer' className='share__card__twitter js-share-button'>
         <i className='fab fa-twitter'></i>Compartir en twitter
       </a>
     </div>

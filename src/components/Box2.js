@@ -82,7 +82,6 @@ class Box2 extends React.Component {
   }
 
   render() {
-    console.log('this.props', this.props.stateInfo);
     return (
       <ul className='container-box__two'>
         <li className='collapse'>

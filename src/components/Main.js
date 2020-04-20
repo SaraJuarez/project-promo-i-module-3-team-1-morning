@@ -4,7 +4,7 @@ import Box2 from './Box2';
 import '../stylesheets/Main.scss';
 import { useState, useEffect } from 'react';
 
-function Main(props) {
+function Main() {
   //Establecemos un 'estado inicial' del que partir si no tenemos datos/los borramos
   const initialState = { palette: 1 };
   const [data, setData] = useState(initialState);
@@ -48,11 +48,8 @@ function Main(props) {
 
   const handleReset = (ev) => {
     setData({});
-  }
+  };
 
-
-
-  console.log('data contains', data);
   return (
     <div className='container-box'>
       <Box1 functionReset={handleReset} infoFromInput={data} />

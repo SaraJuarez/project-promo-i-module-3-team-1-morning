@@ -7,9 +7,9 @@ import '../stylesheets/Landing.scss';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
-function Landing(props) {
+function Landing() {
   return (
-    <body>
+    <>
       <main className='main-landing'>
         <div className='img-container'>
           <img className='img-container__image' src={imageHeader} alt='Logotipo de Awasome profile-cards' title='Awasome profile-cards' />
@@ -36,10 +36,8 @@ function Landing(props) {
           </Link>
         </div>
       </main>
-      <footer>
-        <Footer />
-      </footer>
-    </body>
+      <Footer />
+    </>
   );
 }
 export default Landing;

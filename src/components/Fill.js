@@ -3,7 +3,6 @@ import '../stylesheets/Fill.scss';
 let htmlInput = {};
 
 function Fill(props) {
-  // console.log(props);
   const getValue = (ev) => {
     htmlInput = ev.target;
     props.handleInputsforFill(htmlInput);
