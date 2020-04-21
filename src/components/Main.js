@@ -46,14 +46,14 @@ function Main() {
     setData(newImg);
   };
 
-  const handleReset = (ev) => {
+  const handleReset = () => {
     setData(initialState);
   };
 
   return (
     <div className='container-box'>
       <Box1 functionReset={handleReset} infoFromInput={data} />
-      <Box2 handlefunction={handleUserInfo} handlePalette={handlePalette} stateInfo={data} handleSaveImg={saveDataImg} photo={data.photo} />
+      <Box2 handlefunction={handleUserInfo} handlePalette={handlePalette} stateInfo={data} handleSaveImg={saveDataImg} />
     </div>
   );
 }
