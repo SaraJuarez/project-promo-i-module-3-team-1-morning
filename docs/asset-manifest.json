@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.1c0d9733.chunk.css",
+    "main.css": "./static/css/main.1c2c419a.chunk.css",
     "main.js": "./static/js/main.0d71e723.chunk.js",
     "main.js.map": "./static/js/main.0d71e723.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.4c2e7753.js",
@@ -8,9 +8,9 @@
     "static/js/2.d71a472c.chunk.js": "./static/js/2.d71a472c.chunk.js",
     "static/js/2.d71a472c.chunk.js.map": "./static/js/2.d71a472c.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.fae887f985c72a26a1b9f1c603da9b3b.js": "./precache-manifest.fae887f985c72a26a1b9f1c603da9b3b.js",
+    "precache-manifest.f27e0f7d9eac5461b941c2f4a55d4246.js": "./precache-manifest.f27e0f7d9eac5461b941c2f4a55d4246.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.1c0d9733.chunk.css.map": "./static/css/main.1c0d9733.chunk.css.map",
+    "static/css/main.1c2c419a.chunk.css.map": "./static/css/main.1c2c419a.chunk.css.map",
     "static/js/2.d71a472c.chunk.js.LICENSE.txt": "./static/js/2.d71a472c.chunk.js.LICENSE.txt",
     "static/media/image-rogelia.jpg": "./static/media/image-rogelia.d00353c3.jpg",
     "static/media/keyboard-regular.svg": "./static/media/keyboard-regular.513646c9.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.4c2e7753.js",
     "static/js/2.d71a472c.chunk.js",
-    "static/css/main.1c0d9733.chunk.css",
+    "static/css/main.1c2c419a.chunk.css",
     "static/js/main.0d71e723.chunk.js"
   ]
 }
