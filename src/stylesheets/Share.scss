@@ -1,0 +1,127 @@
+@import 'Settings';
+
+.share {
+  &__uncollapsed {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.875rem;
+  }
+  &__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__enabled {
+      display: flex;
+      flex-direction: row;
+      background-color: $color-orange;
+      color: $color-white;
+      width: 12.44rem;
+      height: 3.125rem;
+      border-radius: 0.75rem;
+      box-shadow: rgba(0, 0, 0, 0.32);
+      align-items: center;
+      margin-top: 1.875rem;
+      margin-bottom: 1.875rem;
+    }
+    &__enabled:focus {
+      outline: 0;
+    }
+    &__unabled {
+      display: flex;
+      flex-direction: row;
+      background-color: #d5d5d5;
+      color: $color-white;
+      width: 12.44rem;
+      height: 3.125rem;
+      border-radius: 0.75rem;
+      box-shadow: rgba(0, 0, 0, 0.32);
+      align-items: center;
+      margin-top: 1.875rem;
+      margin-bottom: 1.875rem;
+    }
+    &__unabled:focus {
+      outline: 0;
+    }
+
+    &__title {
+      padding-left: 0.875rem;
+      text-transform: uppercase;
+      font-family: $font-secondary;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: solid #d8d8d8 0.063rem;
+
+    &__text {
+      font-size: 1.125rem;
+      font-family: $font-secondary;
+      color: $color-metal;
+      margin-top: 1.25rem;
+      padding-right: 0.5625rem;
+    }
+    &__link {
+      font-size: 0.75rem;
+      color: $color-orange;
+      text-decoration: none;
+      font-family: $font-secondary;
+    }
+    &__twitter {
+      font-size: 0.875rem;
+      font-family: $font-secondary;
+      width: 11.31rem;
+      height: 1.875rem;
+      background-color: #00a0f5;
+      color: $color-white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      margin-top: 0.8125rem;
+      padding-right: 0.5625rem;
+      border-radius: 0.1875rem;
+      box-shadow: rgba(0, 0, 0, 0.32);
+    }
+  }
+}
+
+.fa-address-card {
+  margin-left: 1.063rem;
+  font-size: 1.375rem;
+  // width: 1.563rem;
+  // height: 1.375rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-twitter {
+  margin-left: 0.625rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #438792; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

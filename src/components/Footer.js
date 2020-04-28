@@ -2,7 +2,7 @@ import React from 'react';
 import logoAdalab from '../images/logo-adalab.png';
 import '../stylesheets/Footer.scss';
 
-function Footer(props) {
+function Footer() {
   return (
     <footer>
       <div className='footer'>

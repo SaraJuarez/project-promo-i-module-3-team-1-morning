@@ -1,0 +1,15 @@
+@media all and (min-width: 768px) {
+  .container-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: 0;
+    padding-top: 1.25rem;
+
+    &__two {
+      width: 52%;
+      margin-left: 1.25rem;
+      margin-right: 1.25rem;
+    }
+  }
+}

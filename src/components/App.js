@@ -1,18 +1,17 @@
 import React from 'react';
-// import logo from '../images/logo.svg';
 import '../stylesheets/App.scss';
-
-import Header from './Header';
-import Footer from './Footer';
-import Main from './Main';
+import { Route, Switch } from 'react-router-dom';
+import Landing from './Landing';
+import CardWrapper from './CardWrapper';
 
 function App() {
   return (
-    <div className='App'>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <>
+      <Switch>
+        <Route exact path='/' component={Landing} />
+        <Route path='/CardWrapper' component={CardWrapper} />
+      </Switch>
+    </>
   );
 }
 
